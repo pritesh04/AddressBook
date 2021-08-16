@@ -126,6 +126,30 @@ public class AddressBookMain {
 			}
 		}
 	}
+	public void deletePerson() {
+		System.out.println("Enter first name do you want to delete contact :");
+		Scanner ip = new Scanner(System.in);
+		String name = ip.nextLine();
+		for (int j = 0; j < I; j++) {
+			if (addressBooks[j].firstName.equals(name) && addressBooks[j] != null) {
+				addressBooks[j] = null;
+			}
+		}
+	}
+	public void displayAllContacts() {
+		System.out.println(
+				"First Name        Last Name      Address       City       State       Zip      Phone Number     Email");
+		
+		for (int j = 0; j < I; j++) {
+			if (addressBooks[j] != null) {
+				System.out.println(addressBooks[j].firstName + "         " + addressBooks[j].lastName + "        "
+						+ addressBooks[j].address + "       " + addressBooks[j].city + "     " + addressBooks[j].state
+						+ "     " + addressBooks[j].zip + "     " + addressBooks[j].phoneNumber + "      "
+						+ addressBooks[j].email);
+			}
+		}
+		System.out.println();
+	}
 
 
 
