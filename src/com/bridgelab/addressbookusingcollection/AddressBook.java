@@ -42,6 +42,8 @@ public class AddressBook {
 		}
 
 	}
+	
+	
 
 	public boolean checkDuplicate(String firstName) {
 		for (int i = 0; i < list.size(); i++) {
@@ -52,6 +54,17 @@ public class AddressBook {
 		}
 		return true;
 
+	}
+	public void showAccordingToCity() {
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter City: ");
+		String city = sc.nextLine();
+		
+		for(int i =0;i<list.size();i++) {
+			if(city.equals(list.get(i).city)) {
+				System.out.println(list.get(i).getFirstName());
+			}
+		}
 	}
 
 	public String getFirstName() {
