@@ -1,5 +1,6 @@
 package com.bridgelab.addressbookusingcollection;
 
+<<<<<<< HEAD
 import java.util.Collection;
 import java.util.LinkedList;
 import java.util.List;
@@ -7,6 +8,11 @@ import java.util.Scanner;
 
 public class CollegeAddressBookRunner {
 
+=======
+import java.util.Scanner;
+
+public class CollegeAddressBookRunner {
+>>>>>>> Uc7
 	public static void main(String[] args) {
 		CollegeAddressBook book = new CollegeAddressBook();
 
@@ -22,7 +28,12 @@ public class CollegeAddressBookRunner {
 			while (true) {
 				System.out.println("please enter int");
 				System.out.println("Enter Choice: ");
+<<<<<<< HEAD
 				System.out.println("1. Add Contact in college Book; 2. Edit Contact in college Book ; 3. Delete Contact ; 4. Display Contacts  ");
+=======
+				System.out.println(
+						"1. Add Contact in college Book; 2. Edit Contact in college Book ; 3. Delete Contact ; 4. Display Contacts  ");
+>>>>>>> Uc7
 				a = sc.nextInt();
 				switch (a) {
 				case 1:
@@ -49,10 +60,16 @@ public class CollegeAddressBookRunner {
 					book.showBook();
 					break;
 				case 3:
+<<<<<<< HEAD
 					 book.removeContact();
 					break;
 
 				
+=======
+					book.removeContact();
+					break;
+
+>>>>>>> Uc7
 				default:
 					System.out.println("Wrong input");
 				}
@@ -61,5 +78,9 @@ public class CollegeAddressBookRunner {
 		}
 
 	}
+<<<<<<< HEAD
 
 }
+=======
+}
+>>>>>>> Uc7

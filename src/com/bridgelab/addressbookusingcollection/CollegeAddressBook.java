@@ -2,9 +2,13 @@ package com.bridgelab.addressbookusingcollection;
 
 import java.util.ArrayList;
 import java.util.Iterator;
+<<<<<<< HEAD
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
+=======
+import java.util.List;
+>>>>>>> Uc7
 import java.util.Scanner;
 
 public class CollegeAddressBook {
@@ -21,8 +25,11 @@ public class CollegeAddressBook {
 	public CollegeAddressBook() {
 	}
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> Uc7
 	public CollegeAddressBook(String firstName, String lastName, String address, String city, String state, String zip,
 			String phoneNumber, String email) {
 		this.firstName = firstName;
@@ -44,6 +51,7 @@ public class CollegeAddressBook {
 		this.showBook();
 
 	}
+<<<<<<< HEAD
 	public void addContactInBook(String fName, String lName, String address, String city, String state, String zip,
 			String mobNo, String eMailId) {
 		
@@ -55,13 +63,41 @@ public class CollegeAddressBook {
 	
 
 	
+=======
+
+	public void addContactInBook(String fName, String lName, String address, String city, String state, String zip,
+			String mobNo, String eMailId) {
+		if(this.checkDuplicate(fName))
+		{
+		list.add(new CollegeAddressBook(fName, lName, address, city, state, zip, mobNo, eMailId));
+		}
+		else {
+			System.out.println("Duplicate occured in the book");
+		}
+	}
+	public boolean checkDuplicate(String firstname) {
+		for (int i=0;i<list.size();i++) {
+			if(firstname.equals(list.get(i).firstName)) {
+				return false;
+			}
+		}
+		return true;
+	}
+
+>>>>>>> Uc7
 	public void showContact() {
 		Scanner sc = new Scanner(System.in);
 		System.out.println("Enter state: ");
 		String state = sc.nextLine();
+<<<<<<< HEAD
 		
 		for(int i =0;i<list.size();i++) {
 			if(state.equals(list.get(i).state)) {
+=======
+
+		for (int i = 0; i < list.size(); i++) {
+			if (state.equals(list.get(i).state)) {
+>>>>>>> Uc7
 				System.out.println(list.get(i).getPhoneNumber());
 			}
 		}
@@ -196,8 +232,11 @@ public class CollegeAddressBook {
 		return true;
 	}
 
+<<<<<<< HEAD
 	
 
+=======
+>>>>>>> Uc7
 	public void showBook() {
 		int i = 0;
 		Iterator<CollegeAddressBook> itr = list.iterator();
@@ -207,13 +246,19 @@ public class CollegeAddressBook {
 		}
 	}
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> Uc7
 	@Override
 	public String toString() {
 		return "AddressBook [firstName=" + firstName + ", lastName=" + lastName + ", address=" + address + ", city="
 				+ city + ", state=" + state + ", zip=" + zip + ", phoneNumber=" + phoneNumber + ", email=" + email
 				+ "]";
 	}
+<<<<<<< HEAD
 
+=======
+>>>>>>> Uc7
 }
