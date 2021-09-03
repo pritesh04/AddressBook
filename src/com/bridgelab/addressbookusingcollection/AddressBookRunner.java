@@ -46,16 +46,7 @@ public class AddressBookRunner {
 				case 2:
 					book.showBook();
 					break;
-				case 3:
-					// book.updateContact();
-					break;
 
-				case 4:
-					book.showByState("a");
-					break;
-				case 5:
-					book.removeContact();
-					break;
 				default:
 					System.out.println("Wrong input");
 				}

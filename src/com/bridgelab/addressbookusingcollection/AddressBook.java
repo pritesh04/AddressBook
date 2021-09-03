@@ -35,9 +35,11 @@ public class AddressBook {
 
 	public void addContactInBook(String fName, String lName, String address, String city, String state, String zip,
 			String mobNo, String eMailId) {
-		
+		if (checkDuplicate(fName))
 			list.add(new AddressBook(fName, lName, address, city, state, zip, mobNo, eMailId));
-		
+		else {
+			System.out.println("Duplicate Seen in the book please enter other name");
+		}
 
 	}
 
