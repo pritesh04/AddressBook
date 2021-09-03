@@ -66,6 +66,17 @@ public class AddressBook {
 			}
 		}
 	}
+	public void showAccordingToState() {
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter state: ");
+		String state = sc.nextLine();
+		
+		for(int i =0;i<list.size();i++) {
+			if(state.equals(list.get(i).state)) {
+				System.out.println(list.get(i).getFirstName());
+			}
+		}
+	}
 
 	public String getFirstName() {
 		return firstName;

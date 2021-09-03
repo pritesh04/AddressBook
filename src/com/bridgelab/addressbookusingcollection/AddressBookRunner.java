@@ -54,7 +54,7 @@ public class AddressBookRunner {
 					book.showAccordingToCity();
 					break;
 				case 5:
-					//book.removeContact();
+					book.showAccordingToState();
 					break;
 				default:
 					System.out.println("Wrong input");
