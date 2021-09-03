@@ -35,6 +35,15 @@ public class CollegeAddressBook {
 		this.email = email;
 	}
 
+	public void removeContact() {
+		this.showBook();
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter index number");
+		int a = sc.nextInt();
+		list.remove(a);
+		this.showBook();
+
+	}
 	public void addContactInBook(String fName, String lName, String address, String city, String state, String zip,
 			String mobNo, String eMailId) {
 		
